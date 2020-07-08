@@ -36,7 +36,9 @@ case "$TARGET" in
   *) exit ;;
 esac
 
-master=$(git ls-remote "$RUST_REPO" refs/heads/master | cut -f1)
+# Temporary override
+# master=$(git ls-remote "$RUST_REPO" refs/heads/master | cut -f1)
+master="6de63b2d8084123ff1471f5cf1c89f77b362427b"
 image_url="$ARTIFACTS_BASE_URL/$master/image-$image.txt"
 info="/tmp/image-$image.txt"
 
